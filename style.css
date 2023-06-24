@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --pale-blue: #e0e8ff;
+    --bright-blue: #3829e0;
+    --very-plae-blue: #f5f7ff;
+    --desaturated-blue: #7280a7;
+    --dark-blue: #1f2f56;
+
+    --text: 1rem;
+
+    --weight-sm: 500;
+    --weight-md: 700;
+    --weight-lg: 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-size: var(--text);
+}
+
+main {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+
+    background-color: var(--pale-blue);
+}
+
+.card {
+    min-height: 250px;
+    width: 400px;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    border-radius: 20px;
+    background-color: var(--very-plae-blue);
+    text-align: center;
+}
+
+.illustration {
+    width: 100%;
+}
+
+.illustration img {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.summary {
+    padding: 1rem 2.5rem 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.title {
+    color: var(--dark-blue);
+    font-weight: var(--weight-lg);
+}
+
+h1 { font-size: 1.6rem; }
+
+.sub {
+    font-size: var(--text);
+    font-weight: var(--weight-sm);
+    color: var(--desaturated-blue);
+}
+
+.plan {
+    padding: 1rem;
+    background-color: #eff2f8;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    gap: 1rem;
+}
+
+h2 { font-size: var(--text); }
+
+.cost {
+    font-size: var(--text);
+    font-weight: var(--weight-sm);
+    color: var(--desaturated-blue);
+}
+
+.change {
+    font-size: .9rem;
+    font-weight: var(--weight-md);
+    color: var(--bright-blue);
+    text-decoration: underline;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.change:hover {
+    text-decoration: none;
+    opacity: .7;
+}
+
+.proceed {
+    color: white;
+    font-size: .9rem;
+    font-weight: var(--weight-md);
+    padding: .7rem 1rem;
+    border: none;
+    outline: none;
+    background-color: var(--bright-blue);
+    border-radius: 10px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.proceed:hover {
+    opacity: .7;
+}
+
+.cancel {
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: var(--weight-md);
+    color: var(--desaturated-blue);
+    transition: all .3s ease;
+}
+
+.cancel:hover {
+    color: var(--dark-blue);
+}
+
+@media screen and (max-width: 500px) { 
+    .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .summary {
+        padding: 1rem 2rem 2rem 2rem;
+    }
+}
